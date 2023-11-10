@@ -1,0 +1,19 @@
+---
+# Dodaj słownik `address` z polami
+#
+#|  Key/Property |       Value      |
+#|---------------|------------------|
+#| city          | edison           |
+#| state         | new jersey       |
+#| country       | united states    |
+#
+
+employee:
+  name: john
+  gender: male
+  age: 24
+  address:
+    city: edison
+    state: new jersey
+    country: united states
+...

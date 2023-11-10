@@ -1,0 +1,11 @@
+---
+# nested list
+-
+  - orange
+  - apple
+  - bannana
+
+-
+  - carrot
+  - tomato
+...

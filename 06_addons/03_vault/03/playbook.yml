@@ -1,0 +1,10 @@
+# Encrypting variable
+# ansible-vault encrypt_string --ask-vault-pass --name 'ansible_password' 'vagrant'
+# ansible-playbook --ask-vault-pass playbook.yml
+---
+- hosts: centos0
+  vars_files:
+    - encrypted_vars.yml
+  tasks:
+    - ping:
+...

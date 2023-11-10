@@ -1,0 +1,7 @@
+---
+# debug module
+- hosts: centos0
+  tasks:
+    - debug:
+        msg: Hello, world!
+...

@@ -1,0 +1,12 @@
+---
+# jinja conditions, >- operator
+- hosts: all
+  tasks:
+    - debug:
+        msg: >- 
+            {% if ansible_host=="127.0.0.1" %}
+            To jest Centos
+            {% else %}
+            To nie jest Centos
+            {% endif %}
+...

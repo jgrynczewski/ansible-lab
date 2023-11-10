@@ -1,0 +1,2 @@
+ansible centos1 -m setup
+ansible centos1 -m setup -a 'filter=ansible_mem*'

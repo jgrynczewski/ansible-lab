@@ -1,0 +1,20 @@
+---
+# Scenariusz posiada dwa zadania.
+# Użyj dyrektywy `register`, żeby przechwycić output pierwszego zadania
+# do zmiennej command_output. Następnie wprowadź warunek w drugim zadaniu
+# w taki sposób, żeby zadanie uruchamiało się tylko wtedy kiedy
+# `command_output` zawierać będzie nazwę serwera (10.0.250.10).
+
+# hint: możesz użyć `command_output.stdout.find(<IP>) == -1`
+
+- name: 'Add name server entry if not already entered'
+  hosts: localhost
+  become: yes
+  tasks:
+    - shell: 'cat /etc/resolv.conf'
+      register: command_output
+
+    - shell: 'echo "nameserver 10.0.250.10" >> /etc/resolv.conf'
+      when: 'command_output.stdout.find("10.0.250.10") == -1'
+...
+

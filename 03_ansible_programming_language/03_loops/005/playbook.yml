@@ -1,0 +1,17 @@
+---
+# with_items statement
+- hosts: localhost
+  tasks:
+    - user:
+        name: "{{ item.name }}"
+        uid: "{{ item.uid }}"
+        state: present
+      with_items:
+        - name: ann
+          uid: 1020
+        - name: abraham
+          uid: 1021
+        - name: william
+          uid: 1022
+      become: true
+...

@@ -1,0 +1,15 @@
+---
+# or operator
+- hosts: all
+  tasks:
+    - yum:
+        name: net-tools
+        state: latest
+      when: ansible_distribution == 'CentOS' or ansible_os_family == 'RedHat'
+      become: true
+    - apt:
+        name: net-tools
+        state: latest
+      when: ansible_distribution == 'Ubuntu'
+      become: true
+...

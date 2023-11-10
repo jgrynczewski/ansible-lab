@@ -1,0 +1,6 @@
+---
+# jinja variable
+- hosts: localhost
+  tasks:
+    - debug:
+        msg: '{{ ansible_host }}'

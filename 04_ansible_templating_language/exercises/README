@@ -1,0 +1,8 @@
+1. Zmodyfikuj szablon 01/tempaltes/student.txt.j2 w taki sposób, żeby dla przykładowego inputu:
+{
+  "name": "Bob"
+}
+zwracał output:
+The student name is BOB
+
+2. Uzupełnij scenariusz 02/playbook.yml oraz zmodyfikuj szablon templates/name.txt.j2 w taki sposób, żeby scenariusz generował plik /tmp/name.txt na localhost z zadanego szablonu name.txt.j2, w którym napis Bourne będzie zastępowany napisem Bond.

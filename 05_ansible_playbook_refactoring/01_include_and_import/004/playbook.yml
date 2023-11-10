@@ -1,0 +1,5 @@
+---
+# importing playbook (static, each task will independently execute against the when condition)
+
+- import_playbook: import_playbook.yml
+...

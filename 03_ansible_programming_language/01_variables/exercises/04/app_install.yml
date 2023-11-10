@@ -1,0 +1,17 @@
+---
+# W scenariuszu znajduje się zahardkowana lista paczek do zainstalowania.
+# Przenieś listę do pliku inventory.ini (zdefiniuj w pliku zmienną `app_list`),
+# a następnie w scenariuszu użyj tej zmiennej w miejsce zahardkodowanej listy.
+
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install applications
+      yum:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - vim
+        - sqlite
+        - jq
+...

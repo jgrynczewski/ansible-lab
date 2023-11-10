@@ -1,0 +1,9 @@
+1. Scenariusz 1/playbook.yml dodaje wpis do /etc/resolve.conf. Zmień treść wpisu w taki sposób, żeby w miejsce zahardkodowanego adresu `8.8.8.8` wprowadzana była wartość zmiennej `nameserver_ip` zdefiniowana w pliku inventory.ini.
+
+2. W scenariuszu 2/playbook.yml zamień zahardkodowane numery portów na wartość zmiennej snmp_port zdefiniowanej w pliku inventory.ini
+
+3. W scenariuszu 3/playbook.yml zdefiniuj 3 zmienne akcji `car_model`, `country_name` oraz `title` i użyj ich w scenariuszu w miejce zahardkodowanych wartości
+
+4. W scenariusz 4/app_install.yml znajduje się zahardkowana lista paczek do zainstalowania. Przenieś listę do pliku inventory (zdefiniuj w pliku zmienną `app_list`), a następnie w scenariuszu użyj tej zmiennej w miejsce zahardkodowanej listy.
+
+5. W scenariuszu 4/user_setup.yml znajdują się zahardkodowane wartości `name`, `password', `comment` użytkownika. Zamień je na wartości odpowiednich zmiennych zdefiniowaych w pliku inventory.ini.

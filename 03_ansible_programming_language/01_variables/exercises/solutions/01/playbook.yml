@@ -1,0 +1,13 @@
+---
+# Scenariusz dodaje wpis do /etc/resolve.conf.
+# Zmień treść wpisu w taki sposób, żeby w miejsce zahardkodowanego adresu `8.8.8.8`
+# wprowadzana była wartość zmiennej `nameserver_ip` zdefiniowana w pliku inventory.
+
+- name: 'Add nameserver in resolv.conf file on localhost'
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: 'Add nameserver in resolv.conf file'
+      lineinfile:
+        path: /etc/resolv.conf
+        line: 'nameserver {{ nameserver_ip }}'

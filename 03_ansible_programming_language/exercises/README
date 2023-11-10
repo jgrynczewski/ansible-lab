@@ -1,0 +1,17 @@
+1. Uzupełnij scenariusz 01/playbook.yml w taki sposób, żeby zawierał zadania o nazwa `Execute a script`, które będzie uruchamiało skrypt znajdującą się w `/tmp/install_script.sh` na hoście będącym kontrolerem ansible.
+
+hint: użyj modułu `script`
+
+2. Do scenariusza 02/playbook.yml dodaj nowe zadanie, które uruchamia usługę httpd na wszystkich hostach zdefiniowanych w 02/inventory
+
+hint: użyj modułu `service`
+
+3. Dodaj kolejne zadanie w scenariuszu 03/playbook.yml, które doda na wszystkich hostach z grupy `web nodes` linijkę do pliku `/var/www/html/index.html`. Treść dodawanej linijki: `Welcome, dear guest!`. Jeżeli plik nie istnieje, powinien zostać stworzony.
+
+hint: użyj modułu `lineinfile`
+
+4. Dodaj nowe zadanie do scenariusza 04/playbook.yml, które utworzy nowego użytkownika `web_user`. Użyj do tego modułu `user`. Dane użytkownika:
+
+username: web_user
+uid: 1040
+group: developers

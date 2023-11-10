@@ -1,0 +1,8 @@
+---
+# jinja templating: filters and operators
+- hosts: all
+  tasks:
+    - template:
+        src: example_template.j2
+        dest: result.txt
+...

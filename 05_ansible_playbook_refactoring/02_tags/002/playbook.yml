@@ -1,0 +1,46 @@
+---
+# Plays's tags (tag for an entire play, useful if a playbook
+# is being used with multiple plays.
+
+# ansible-playbook playbook.yml --tags "nginx"
+
+- name: Install and restart nginx
+  hosts: centos
+  tags:
+    - nginx
+  tasks:
+    - name: Install EPEL
+      yum:
+        name: epel-release
+        update_cache: yes
+        state: latest
+      become: true
+      when: ansible_distribution == 'CentOS'
+      tags:
+        - install-epel
+
+    - name: Install Nginx
+      package:
+        name: nginx
+        state: latest
+      become: true
+      tags:
+        - install-nginx
+
+    - name: Stop apache
+      service:
+        name: httpd
+        state: stopped
+      become: true
+      when: ansible_distribution == 'CentOS'
+      tags:
+        - restart-nginx
+
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted
+      become: true
+      tags:
+        - restart-nginx
+...

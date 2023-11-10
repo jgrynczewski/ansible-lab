@@ -1,0 +1,11 @@
+---
+# importing task
+
+- hosts: centos0
+  tasks:
+    - name: PLAY 1 - TASK 1
+      debug: 
+        msg: play 1 - task 1
+
+    - import_tasks: task2.yml
+...

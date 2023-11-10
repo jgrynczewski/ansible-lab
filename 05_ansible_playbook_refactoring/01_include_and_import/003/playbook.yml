@@ -1,0 +1,28 @@
+---
+# include vs import (noticible when using the when statement)
+
+- hosts: centos0
+  tasks:
+     - debug:
+         msg: ===================== Testing include_tasks =====================
+
+    # include_tasks is dynamic
+    # All include* statements are processed as they are encountered during
+    # the execution of the playbook.
+
+     - include_tasks: include_tasks.yml
+       when: include_tasks_var is not defined  # it is evaluated separatetly
+       # for each task.
+
+     - debug:
+         msg: ===================== Testing import_tasks ======================
+
+     # import_tasks is static
+     # All import* statements are pre-processed at the time playbooks are parsed.
+
+     - import_tasks: import_tasks.yml
+       when: import_tasks_var is not defined  # when the first task runs (set_facts)
+       # this sets the variable and because of this when it loops to make a next
+       # comparison the variable is defined and the subsequence tasks no longer
+       # need the when condition.
+...

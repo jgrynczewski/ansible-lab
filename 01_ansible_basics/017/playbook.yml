@@ -1,0 +1,9 @@
+---
+# apt module
+- hosts: ubuntu0
+  tasks:
+    - apt:
+        name: net-tools
+        state: latest
+      become: true
+...

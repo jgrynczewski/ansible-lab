@@ -1,0 +1,12 @@
+---
+# W scenariuszu dodaj nowy task.
+# Nowy task powinien wykonywać komendę `cat /etc/resolv.conf`
+# i nazywać się `Task to display nameservers`.
+
+- name: 'Execute two commands on localhost'
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: 'Task to display hosts file'
+      command: 'cat /etc/hosts'
+...

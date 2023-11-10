@@ -1,0 +1,14 @@
+---
+# Uzupełnij scenariusz w taki sposób, żeby zawierał zadanie o nazwie
+# `Execute a script`, które będzie uruchamiało skrypt znajdującą się
+# w `/tmp/install_script.sh` na hoście będącym kontrolerem ansible.
+
+# hint: użyj modułu `script`
+
+- name: 'hosts'
+  hosts: all
+  become: yes
+  tasks:
+    - name: 'Execute a script'
+      script: '/tmp/install_script.sh'
+...

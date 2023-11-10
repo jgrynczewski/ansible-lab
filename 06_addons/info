@@ -1,0 +1,27 @@
+Playbook debugging tools:
+=========================
+
+1. Verbose mode
+   ansible-playbook playbook.yml -vvvv
+
+2. Debugging
+ansible-playbook playbook.yml --step
+
+3. Logging 
+   ansible.cfg
+     log_path=log.txt
+
+Playbook veryfication tools
+============================
+
+1. Dry mode
+ansible-playbook playbook.yml --check
+
+2. Diff mode (before and after comparison)
+ansible-playbook playbook.yml --check --diff
+
+3. Syntax check
+ansible-playbook playbook.yml --syntax-check
+
+4. Linting
+   ansible-lint playbook.yml

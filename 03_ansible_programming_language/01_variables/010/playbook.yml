@@ -1,0 +1,11 @@
+---
+# variable from vars_file
+- hosts: centos0
+  vars_files:
+    - vars.yml
+  tasks:
+    - lineinfile:
+        path: test_file.txt
+        line: 'nameserver {{ server_ip }}'
+        create: yes
+...

@@ -1,0 +1,9 @@
+---
+# W scenariuszu zdefiniuj 3 zmienne o zasięgu akcji `car_model`, `country_name`
+# oraz `title` i użyj ich w scenariuszu w miejce zahardkodowanych wartości.
+
+- hosts: localhost
+  tasks:
+    - command: 'echo "My car is BMW M3"'
+    - command: 'echo "I live in the USA"'
+    - command: 'echo "I work as a Systems Engineer"'

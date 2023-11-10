@@ -1,0 +1,18 @@
+
+Filters operators:
+
+Concatenation operator:
+{{ ansible_hostname }}
+{{ ansible_hostname + 'napis' }}
+
+Addition operator:
+{{ ansible_processor_cores }}
+{{ ansible_processor_cores - 1 }}
+
+Casting:
+{# ansible_date_time.day + 1 #}
+{{ ansible_date_time.day | int + 1 }}
+
+Filters chaining:
+{{ ansible_hostname | upper | replace('C', '') }}
+

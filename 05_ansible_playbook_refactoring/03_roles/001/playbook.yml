@@ -1,0 +1,5 @@
+---
+- hosts: ubuntu0
+  roles: 
+    - nginx
+...

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Mastering Ansible</title>
+    <style>
+        html {
+            font: normal normal 105%/1.7 sans-serif
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 30px;
+            padding: 0 1.5rem
+        }
+
+        .grid {
+            margin-left: -3%;
+            max-width: 105%
+        }
+
+        .unit {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            vertical-align: top;
+            margin-left: 3%;
+            margin-right: -.25em;
+            overflow: hidden;
+            *overflow: visible
+        }
+
+        .span-grid {
+            width: 97%
+        }
+        
+        h1 {
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.0;
+            letter-spacing: -0.05555556em;
+            font-size: 60px;
+            font-size: 3.4em;
+            font-shadow: none;
+            color: #333;
+        }
+        
+        img {
+            height: auto;
+        }
+
+        .head {
+            height: 150px;
+        }
+
+        .intro {
+            float: right;
+            margin: 1.0em;
+            max-width: 60%;
+        }
+
+        @media screen and (max-width:650px) {
+            img {
+                height: auto;
+                color: #c00
+            }
+            .intro {
+                float: right;
+                margin: 1.0em;
+                max-width: 100%;
+            }
+            .grid {
+                margin-left: 0;
+                max-width: none
+            }
+            .unit {
+                width: auto;
+                margin-left: 0;
+                display: block
+            }
+            .head {
+                height: 100px
+            }
+            h1 {
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 1.0;
+                letter-spacing: -0.05555556em;
+                font-size: 50px;
+                font-size: 2.0rem;
+                font-shadow: none;
+                color: #333
+            }
+            html {
+                font-size: 90%:line-height:normal
+            }
+            #menu {
+                display: none;
+            }
+            img {
+                height: auto;
+                border: 0;
+            }
+            .intro {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body id="top">
+    <div class="container">
+        <div class="grid">
+            <div class="unit span-grid">
+                <div class="head">
+                    <br>
+                </div>
+                <div class="unit span-grid">
+
+                    <img src="
+                              {%- if ansible_distribution == 'CentOS' -%}
+                              {{ centos_logo }}
+                              {%- elif ansible_distribution == 'Ubuntu' -%}
+                              {{ ubuntu_logo }}
+                              {%- endif %}
+" class="intro" alt="mainpic">
+                    <h1>New page</h1>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

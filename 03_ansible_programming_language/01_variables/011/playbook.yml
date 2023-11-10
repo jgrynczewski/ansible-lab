@@ -1,0 +1,10 @@
+---
+# variable from facts (error because gather_facts disabled)
+- hosts: centos0
+  # gather_facts: false
+  tasks:
+    - lineinfile:
+        path: test_file.txt
+        line: '{{ ansible_hostname }} ({{ ansible_os_family }})'
+        create: yes
+...

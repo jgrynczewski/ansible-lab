@@ -1,0 +1,3 @@
+1. Scenariusz 01/fruits.yml wykonuje obecnie echo. Uzupełnij zadanie (użyj dyrektywy with_items), w taki sposób, żeby zadanie wyświetlało wszystkie elementy zdefiniowane w zmiennej fruits.
+
+2. Scenariusz 02/packages.yml przedstawia nieudaną próbą zainstalowania trzech pakietów. W obecnej postaci scenariszu instaluje tylko jeden pakiet. Zmodyfikuj go w taki sposób, żeby instalował wszystkie pakiety zdefiniowane w zmiennej packages.

@@ -1,0 +1,20 @@
+---
+# Scenariusz przedstawia nieudaną próbą zainstalowania trzech pakietów.
+# W obecnej postaci scenariusz instaluje tylko jeden pakiet.
+# Zmodyfikuj go w taki sposób, żeby instalował wszystkie pakiety zdefiniowane
+# w zmiennej packages.
+
+- name: 'Install required packages'
+  hosts: localhost
+  become: yes
+  vars:
+    packages:
+      - httpd
+      - make
+      - vim
+  tasks:
+    - yum:
+        name: '{{ item }}'
+        state: present
+      with_items: '{{ packages }}'
+...

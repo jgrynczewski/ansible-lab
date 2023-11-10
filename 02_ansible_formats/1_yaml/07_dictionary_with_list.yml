@@ -1,0 +1,11 @@
+---
+# nested list
+fruits:
+  - orange
+  - apple
+  - bannana
+
+vegatables:
+  - carrot
+  - tomato
+...

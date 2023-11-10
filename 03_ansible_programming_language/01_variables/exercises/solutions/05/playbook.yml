@@ -1,0 +1,13 @@
+---
+# W scenariuszu znajdują się zahardkodowane wartości `name`, `password', `comment`
+# użytkownika. Zamień je na wartości odpowiednich zmiennych zdefiniowaych
+# w pliku inventory.ini.
+
+- name: 'Add nameserver in resolv.conf file on localhost'
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: 'Add nameserver in resolv.conf file'
+      lineinfile:
+        path: /etc/resolv.conf
+        line: 'nameserver 8.8.8.8'

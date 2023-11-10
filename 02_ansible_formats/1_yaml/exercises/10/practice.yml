@@ -1,0 +1,22 @@
+---
+# Do słownika dodaj informacje o wypłatach.
+# Wypłaty `payslips` (w odróżnieniu od `address`, który jest słownikiem)
+# to lista z informacją o miesiącu i wysokości wypłaty zgodnie z poniższą tablelą.
+#
+# payslips
+# | month  | amount |
+# |--------|--------|
+# | june   | 1400   |
+# | july   | 2400   |
+# | august | 3400   |
+#
+
+employee:
+  name: john
+  gender: male
+  age: 24
+  address:
+    city: 'edison'
+    state: 'new jersey'
+    country: 'united states'
+...

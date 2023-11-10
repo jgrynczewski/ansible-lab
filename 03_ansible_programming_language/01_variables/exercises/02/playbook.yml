@@ -1,0 +1,18 @@
+---
+# W scenariuszu zamień zahardkodowane numery portów na wartość zmiennej
+# snmp_port zdefiniowanej w pliku inventory.ini
+-
+- name: 'Add nameserver in resolv.conf file on localhost'
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: 'Add nameserver in resolv.conf file'
+      lineinfile:
+        path: /etc/resolv.conf
+        line: 'nameserver {{  nameserver_ip  }}'
+    - name: 'Disable SNMP Port'
+      firewalld:
+        port: '160-161'
+        permanent: true
+        state: disabled 
+...

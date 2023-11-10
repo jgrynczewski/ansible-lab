@@ -1,0 +1,59 @@
+1. W pliku 1/practice.yml dodaj zmienną property2 o wartości value2
+
+2. W pliku 2/practice.yml zmodyfikuj istniejący słownik tak, żeby posiadał następujące wpisy:
+   name=apple
+   color=red
+   weight=90g
+
+3. W pliku 3/practice.yml uzupełnij dane o pracowniku w taki sposób, żeby posiadał następujące dane:
+   
+|  Key/Property | Value |
+|---------------|-------|
+| name	        | john  |
+| gender	| male  |
+| age	        | 24    |
+
+4. W pliku 4/practice.yml dodaj słownik `address` z polami
+
+|  Key/Property |       Value      |
+|---------------|------------------|
+| city          | edison           |
+| state         | new jersey       |
+| country       | united states    |
+
+5. Do listy znajdującej się w pliky 5/practice.yml dodaj jeszcze jeden wpis `apple`
+
+6. Do listy znajdującej się w pliku 6/practice.yml dodaj dwa dowolne wpisy (długość listy powinna wynosić 6)
+
+7. W pliku 7/practice.yml znajduje się lista słowników z niepełnymi danymi. Uzupełnij dane zgodnie z poniższym schematem:
+
+orange
+| color  | weight |
+|--------|--------|
+| orange | 90g    |
+
+
+mango
+| color  | weight |
+|--------|--------|
+| yellow | 150g   |
+
+8. W pliku 8/practice.yml znajduje się słownik `employee` z danymi jednego pracownika. Przerób go na listę `employees`, w której będzie można przechowywać informacje o wielu pracownikach.
+
+9. Do list w pliku 9/ptactice.yml dodaj kolejnego pracownika.
+
+| Key/Property | Value  |
+|--------------|--------|
+| name         | sarah  |
+| gender       | female |
+| age	       | 28     |
+
+10. Do słownika w pliku 10/practice.yml dodaj informacje o wypłatach. Wypłaty `paylips` (w odróżnieniu od `address`, który jest słownikiem) to lista z informacją o miesiącu i wysokości wypłaty zgodnie z poniższą tablelą.
+
+payslips
+| month	 | amount |
+|--------|--------|
+| june	 | 1400   |
+| july   | 2400   |
+| august | 3400   |
+

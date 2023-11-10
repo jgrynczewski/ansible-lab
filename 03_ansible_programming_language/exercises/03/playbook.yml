@@ -1,0 +1,18 @@
+---
+# Dodaj kolejne zadanie w scenariuszu, które doda na wszystkich hostach z grupy
+# `web nodes` linijkę do pliku `/var/www/html/index.html`. Treść dodawanej
+# linijki: `Welcome, dear guest!`. Jeżeli plik nie istnieje, powinien zostać stworzony.
+
+# hint: użyj modułu `lineinfile`
+
+- name: 'hosts'
+  hosts: all
+  become: yes
+  tasks:
+    - name: 'Execute a script'
+      script: '/tmp/install_script.sh'    
+    - name: 'Start httpd service'
+      service:
+        name: 'httpd'
+        state: 'started'
+...

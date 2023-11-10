@@ -1,0 +1,11 @@
+---
+# Uzupełnij scenariusz oraz zmodyfikuj szablon templates/name.txt.j2 w taki sposób,
+# żeby scenariusz generował plik /tmp/name.txt na localhost z zadanego szablonu
+# name.txt.j2, w którym napis Bourne będzie zastępowany napisem Bond.
+
+- hosts: localhost
+  connection: local
+  vars:
+    dialogue: "The name is Bourne, James Bourne!"
+  tasks:
+...

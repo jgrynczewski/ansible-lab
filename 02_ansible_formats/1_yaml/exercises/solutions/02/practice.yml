@@ -1,0 +1,11 @@
+---
+#  Zmodyfikuj istniejący słownik tak, żeby posiadał następujące wpisy:
+#
+#  name=apple
+#  color=red
+#  weight=90g
+
+name: apple
+color: red
+weight: 90g
+...

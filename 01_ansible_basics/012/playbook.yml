@@ -1,0 +1,7 @@
+---
+# command module
+- hosts: all
+  tasks:
+    - command:
+        cmd: id
+...

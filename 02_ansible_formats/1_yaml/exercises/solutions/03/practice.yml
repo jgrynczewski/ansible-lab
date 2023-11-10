@@ -1,0 +1,15 @@
+---
+# Uzupełnij informacje o pracowniku w taki sposób, żeby posiadał następujące dane:
+#
+#|  Key/Property | Value |
+#|---------------|-------|
+#|     name	     | john  |
+#|    gender	 | male  |
+#|     age	     |  24   |
+#
+
+employee:
+  name: john
+  gender: male
+  age: 24
+...

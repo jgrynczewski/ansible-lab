@@ -1,0 +1,7 @@
+---
+# magic variables, facts from other host (error, facts not gathered)
+- hosts: centos0
+  tasks:
+    - debug:
+        msg: '{{ hostvars.ubuntu0.ansible_facts }}'
+...

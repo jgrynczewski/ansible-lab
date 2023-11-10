@@ -1,0 +1,9 @@
+---
+# Introduce playbooks
+
+# comment: any line starting with a pound sign (#)
+# ping module
+- hosts: ubuntu
+  tasks:
+    - ping:
+...

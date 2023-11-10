@@ -1,0 +1,9 @@
+---
+# variable from behavioral inventory parameters
+- hosts: centos0
+  tasks:
+    - lineinfile:
+        path: /home/ansible/test_directory/test_file.txt
+        line: '{{ ansible_user }}'
+        create: yes
+...

@@ -1,0 +1,9 @@
+---
+# package module
+- hosts: centos0
+  tasks:
+    - package:
+        name: httpd
+        state: latest
+      become: true
+...

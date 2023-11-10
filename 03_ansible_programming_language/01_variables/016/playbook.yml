@@ -1,0 +1,12 @@
+---
+# consuming registered variable
+- hosts: all
+  tasks:
+    - name: Exploring register
+      command: hostname -s
+      register: hostname_output
+
+    - name: Show hostname_output
+      debug:
+        msg: '{{ hostname_output }}'
+...

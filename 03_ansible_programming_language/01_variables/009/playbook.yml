@@ -1,0 +1,11 @@
+---
+# variable from functional variables (vars)
+- hosts: centos0
+  vars:
+    server_ip: 192.168.24.144
+  tasks:
+    - lineinfile:
+        path: test_file.txt
+        line: 'nameserver {{ server_ip }}'
+        create: yes
+...

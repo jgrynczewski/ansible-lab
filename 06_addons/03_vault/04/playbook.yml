@@ -1,0 +1,18 @@
+# Encrypting file
+# ansible-vault encrypt encypted_vars.yml
+# ansible-playbook --ask-vault-pass playbook.yml
+
+# decrypting the file : ansible-vault decrypt encrypted_vars.yml
+
+# password rotation: rekey (decrypt and reencrypt the password)
+# ansible-vault rekey encrypted_vars.yml
+
+# view
+# ansible-vault view encrypted_vars.yml
+---
+- hosts: centos0
+  vars_files:
+    - encrypted_vars.yml
+  tasks:
+    - ping:
+...

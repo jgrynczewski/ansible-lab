@@ -1,0 +1,42 @@
+---
+# when statement example (full example)
+- hosts: all
+  tasks:
+    - name: Exploring register
+      command: hostname -s
+      when: 
+        - ansible_distribution == "CentOS" 
+        - ansible_distribution_major_version | int == 7
+      register: hostname_output
+
+    - name: Install patch when changed
+      yum:
+        name: patch
+        state: present
+      when: hostname_output is changed
+      become: true
+
+    - name: Install patch when skipped
+      apt:
+        name: patch
+        state: present
+      when: hostname_output is skipped
+      become: true
+
+
+
+
+    - name: Exploring register
+      command: hostname -s
+      when: 
+        - ansible_distribution == "CentOS" 
+        - ansible_distribution_major_version == "7"
+      register: hostname_register
+
+    - name: Install patch when changed
+      yum:
+        name: patch
+        state: present
+      when: hostname_register is changed
+      become: true
+...

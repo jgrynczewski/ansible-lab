@@ -1,0 +1,9 @@
+---
+# yum module
+- hosts: centos0
+  tasks:
+    - yum:
+        name: net-tools
+        state: latest
+      become: true
+...

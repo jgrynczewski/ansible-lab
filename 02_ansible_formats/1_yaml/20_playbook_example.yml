@@ -1,0 +1,23 @@
+---
+- name: Setup apache server and deploy the static page
+  hosts: centos0
+  
+  tasks:
+    - name: Install the latest version of the apache
+      package:
+        name: httpd
+        state: latest
+      become: true
+
+    - name: Restart the apache server
+      service:
+        name: httpd
+        state: restarted
+      become: true
+
+    - name: Copy the index page
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+      become: true
+...

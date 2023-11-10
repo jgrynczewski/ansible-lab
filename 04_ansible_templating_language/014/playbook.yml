@@ -1,0 +1,8 @@
+---
+# jinja templating: filters with parameters
+- hosts: centos0
+  tasks:
+    - template:
+        src: example_template.j2
+        dest: result.txt
+...

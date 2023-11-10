@@ -1,0 +1,12 @@
+---
+# file module
+- hosts: centos
+  tasks:
+    - file:
+        path: /home/ansible/test_directory
+        state: directory
+
+    - file:
+       path: /home/ansible/test_directory/test_file.txt
+       state: touch
+...

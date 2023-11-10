@@ -1,0 +1,9 @@
+---
+# variable from behavioral inventory parameters
+- hosts: centos0
+  tasks:
+    - lineinfile:
+        path: test_file.txt
+        line: 'nameserver {{ server_ip }}'
+        create: yes
+...

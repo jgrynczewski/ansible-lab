@@ -1,0 +1,12 @@
+---
+# magic variables, facts from other host
+- hosts: ubuntu0
+  tasks:
+    - ping:
+
+
+- hosts: centos0
+  tasks:
+    - debug:
+        msg: '{{ hostvars.ubuntu0.ansible_facts }}'
+...

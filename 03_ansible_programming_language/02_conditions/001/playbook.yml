@@ -1,0 +1,9 @@
+---
+# yum module (reminder)
+- hosts: all
+  tasks:
+    - yum:
+        name: net-tools
+        state: latest
+      become: true
+...

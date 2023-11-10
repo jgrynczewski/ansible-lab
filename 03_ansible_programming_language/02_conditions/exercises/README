@@ -1,0 +1,7 @@
+1. Scenairusz 001/nginx.yml uruchamia nginx. Użyj dyrektywy `when` w taki sposób, żeby zadanie było uruchamiane tylko dla hosta node02
+
+2. Scenariusz 001/age.yml ma zdefiniowaną zmienną age oraz dwa zadania. Użyj dyrektywy `when`, w taki sposób żeby uruchamiany był odpowiedni task w zależności od wartości zmiennej `age`.
+
+2. Scenariusz 001/nameserver.yml posiada dwa zadania. Użyj dyrektywy `register`, żeby przechwycić output pierwszego zadania do zmiennej command_output. Następnie wprowadź warunek w drugim zadaniu w taki sposób, żeby zadanie uruchamiało się tylko wtedy kiedy `command_output` zawierać będzie nazwę serwera (10.0.250.10).
+
+hint: możesz użyć `command_output.stdout.find(<IP>) == -1`

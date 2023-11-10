@@ -1,0 +1,25 @@
+---
+# W pliku znajduje się lista słowników z niepełnymi danymi.
+# Uzupełnij dane zgodnie z poniższym schematem:
+#
+# orange
+# | color  | weight |
+# |--------|--------|
+# | orange | 90g    |
+#
+# mango
+# | color  | weight |
+# |--------|--------|
+# | yellow | 150g   |
+#
+
+- name: apple
+  color: red
+  weight: 100g
+- name: orange
+  color: orange
+  weight: 90g
+- name: mango
+  color: yellow
+  weight: 150g
+...

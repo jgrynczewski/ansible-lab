@@ -1,0 +1,7 @@
+{% if ansible_host=="127.0.0.1" %}
+To jest Centos
+{% elif ansible_host=="127.0.0.2" and ansible_os_family=="Debian" %}
+To jest Ubuntu
+{% else %}
+Nie wiem co to jest
+{% endif %}

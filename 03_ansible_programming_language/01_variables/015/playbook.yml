@@ -1,0 +1,7 @@
+---
+# registering variable: intro
+- hosts: all
+  tasks:
+    - name: Exploring register
+      command: hostname -s
+...

@@ -1,0 +1,13 @@
+---
+# jinja templating: indexing
+- hosts: centos0
+  vars:
+     list:
+         - apple
+         - banana
+         - grape
+  tasks:
+    - template:
+        src: example_template.j2
+        dest: result.txt
+...

@@ -1,0 +1,17 @@
+---
+# Scenariusz wykonuje obecnie echo. Uzupełnij zadanie
+# (użyj dyrektywy with_items), w taki sposób, żeby zadanie
+# wyświetlało wszystkie elementy zdefiniowane w zmiennej fruits.
+
+-  name: 'Print list of fruits'
+   hosts: localhost
+   vars:
+     fruits:
+       - Apple
+       - Banana
+       - Grapes
+       - Orange
+   tasks:
+     - command: 'echo "{{ item }}"'
+       with_items: '{{ fruits }}'...
+...

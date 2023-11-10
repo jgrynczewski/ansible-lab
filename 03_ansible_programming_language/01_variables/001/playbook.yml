@@ -1,0 +1,9 @@
+---
+# writting 'test_line2' string
+- hosts: centos0
+  tasks:
+    - lineinfile:
+        path: /home/ansible/test_directory/test_file.txt
+        line: test_line2
+        create: yes
+...

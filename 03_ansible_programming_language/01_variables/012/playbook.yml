@@ -1,0 +1,7 @@
+---
+# magic variables
+- hosts: centos0
+  tasks:
+    - debug:
+        msg: 'nameserver {{ hostvars["ubuntu0"].server_ip }}'
+...

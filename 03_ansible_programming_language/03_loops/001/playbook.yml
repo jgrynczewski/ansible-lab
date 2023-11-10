@@ -1,0 +1,9 @@
+---
+# user module (reminder)
+- hosts: localhost
+  tasks:
+    - user:
+        name: joe
+        state: present
+      become: true
+...

@@ -1,0 +1,10 @@
+---
+# W pliku znajduje się słownik `employee` z danymi jednego pracownika.
+# Przerób go na listę `employees`, w której będzie można przechowywać
+# informacje o wielu pracownikach.
+
+employee:
+  name: john
+  gender: male
+  age: 24
+...

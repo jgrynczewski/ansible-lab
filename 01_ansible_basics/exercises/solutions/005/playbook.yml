@@ -1,0 +1,21 @@
+---
+# Do scenariusza dodaj nową akcję (play).
+# Nowa akcja powinna nazywać się `Execute a command on ubuntu0`
+# i wykonywać zadanie `cat /etc/hosts` na hoście ubuntu0.
+# Zadanie powinno mieć nazwę `Task to display hosts file on ubuntu0`.
+
+- name: 'Execute two commands on centos'
+  hosts: centos
+  become: yes
+  tasks:
+    - name: 'Task to display hosts file'
+      command: 'cat /etc/hosts'
+    - name: 'Task to display nameservers'
+      command: 'cat /etc/resolv.conf'
+- name: 'Execute a command on ubuntu0'
+  hosts: ubuntu0
+  become: yes
+  tasks:
+     - name: 'Task to display hosts file on ubuntu0'
+       command: 'cat /etc/hosts'
+...

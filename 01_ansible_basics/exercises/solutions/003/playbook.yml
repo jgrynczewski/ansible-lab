@@ -1,0 +1,12 @@
+---
+# Zmodyfikuj scenariusz w taki sposób, żeby zadanie wykonywało się na hoście centos0.
+
+- name: 'Execute two commands on localhost'
+  hosts: centos0
+  become: yes
+  tasks:
+    - name: 'Task to display hosts file'
+      command: 'cat /etc/hosts'
+    - name: 'Task to display nameservers'
+      command: 'cat /etc/resolv.conf'
+...

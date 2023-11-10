@@ -1,0 +1,55 @@
+---
+- name: Update and upgrade packages
+  package:
+    update_cache: yes
+  become: true
+  tags:
+    - always
+
+- name: Install EPEL
+  yum:
+    name: epel-release
+    update_cache: yes
+    state: latest
+  become: true
+  when: ansible_distribution == 'CentOS'
+  tags:
+    - install-epel
+
+- name: Install Nginx
+  package:
+    name: nginx
+    state: latest
+  become: true
+  tags:
+    - install-nginx
+
+- name: Stop apache
+  service:
+    name: httpd
+    state: stopped
+  become: true
+  when: ansible_distribution == 'CentOS'
+
+- name: Restart nginx
+  service:
+    name: nginx
+    state: restarted
+  become: true
+  tags:
+    - restart-nginx
+
+- name: Additional_task
+  debug:
+    msg: OK
+  tags:
+    - restart-nginx
+
+- name: Deploy a page
+  template:
+    src: index.html.j2
+    dest: "{{ nginx_root_location }}/index.html"
+    mode: 0644
+  tags:
+    - deploy-page
+... 

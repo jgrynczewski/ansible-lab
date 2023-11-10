@@ -1,0 +1,11 @@
+---
+# string interpolation
+- hosts: centos0
+  vars:
+    server_ip: 192.68.24.142
+  tasks:
+    - lineinfile:
+        path: /home/ansible/test_directory/test_file.txt
+        line: 'nameserver {{ server_ip }}'
+        create: yes
+...

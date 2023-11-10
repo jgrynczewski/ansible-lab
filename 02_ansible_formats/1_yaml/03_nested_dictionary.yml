@@ -1,0 +1,12 @@
+---
+# nested dictionary
+banana:
+  calories: 105
+  fat: 0.4g
+  carbs: 27.g
+
+grapes:
+  calories: 62
+  fat: 0.3g
+  carbs: 16g
+...

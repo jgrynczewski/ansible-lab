@@ -1,0 +1,11 @@
+---
+# W scenariuszu znajduje się jedno zadanie.
+# Nadaj mu nazwę `Task to display hosts file`.
+
+- name: 'Execute a command to display hosts file on localhost'
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: 'Task to display hosts file'
+      command: 'cat /etc/hosts'
+...

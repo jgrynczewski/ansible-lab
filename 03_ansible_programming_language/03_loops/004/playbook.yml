@@ -1,0 +1,17 @@
+---
+# using loop for multiple module execution
+- hosts: localhost
+  tasks:
+    - user:
+        name: "{{ item.name }}"
+        uid: "{{ item.uid }}"
+        state: present
+      loop:
+        - name: chris
+          uid: 1010
+        - name: bob
+          uid: 1011
+        - name: elen
+          uid: 1012
+      become: true
+...

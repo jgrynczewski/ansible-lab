@@ -1,0 +1,15 @@
+---
+# Do list dodaj kolejnego pracownika.
+#
+# | Key/Property | Value  |
+# |--------------|--------|
+# | name         | sarah  |
+# | gender       | female |
+# | age	       | 28     |
+#
+
+employees:
+  - name: john
+    gender: male
+    age: 24
+...

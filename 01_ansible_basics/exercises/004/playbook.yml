@@ -1,0 +1,13 @@
+---
+# Zmodyfikuj scenariusz w taki sposób, żeby zadanie wykonywało się na wszystkich
+# hostach z grupy centos.
+
+- name: 'Execute two commands on centos0'
+  hosts: centos0
+  become: yes
+  tasks:
+    - name: 'Task to display hosts file'
+      command: 'cat /etc/hosts'
+    - name: 'Task to display nameservers'
+      command: 'cat /etc/resolv.conf'
+...

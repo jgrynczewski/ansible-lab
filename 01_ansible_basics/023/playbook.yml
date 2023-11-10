@@ -1,0 +1,9 @@
+---
+# firewalld module
+- hosts: centos0
+  tasks:
+    - firewalld:
+        port: 80/tcp
+        state: enabled
+        permanent: yes
+      become: true

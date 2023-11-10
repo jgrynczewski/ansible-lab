@@ -1,0 +1,11 @@
+---
+# with_file statement
+- hosts: localhost
+  tasks:
+    - debug:
+        msg: "{{ item }}"
+      with_file:
+        - /etc/hosts
+        - /etc/resolv.conf
+        - /etc/crontab
+...
